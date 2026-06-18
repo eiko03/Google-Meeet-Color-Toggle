@@ -13,10 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Create build folder
+        run: mkdir -p build
+
       - name: Pack extension
         uses: cardinalby/webext-buildtools-pack-extension-dir-action@v1
         with:
-          extensionDir: ./
+          extensionDir: .
           zipFilePath: build/extension.zip
 
       - name: Build CRX
@@ -28,7 +31,7 @@ jobs:
           keyFormat: PEM
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref_name }}
           files: |
