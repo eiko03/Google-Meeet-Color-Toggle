@@ -101,33 +101,112 @@ onUrlChange();
 
 function color_toggle(color) {
   if (color == "white") {
+    var alternate_color = "black";
+    // button appreance change
     document.querySelector("div.button").style.backgroundColor = "#dddddd";
     document.querySelector("div.button").style.border = "4px solid #fff";
     document.querySelector("div.button").style.color = "black";
     document.querySelector("div.box-button").style.border = "4px solid black";
-    var alternate_color = "black";
+
+    // permission required mic, speaker, camera: before
+    document
+      .querySelectorAll(
+        "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-SfQLQb-suEOdc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.lQq6Xc.JJF7Md.nAzhfb.MdzDJe.JJF7Md.nAzhfb",
+      )
+      .forEach((element) => {
+        element.style.backgroundColor = color;
+      });
+
+    // permission required appreance : before
+    element = document.querySelector(
+      "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-SfQLQb-suEOdc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.JJF7Md.nAzhfb.l9bjJd",
+    );
+    if (element) {
+      element.style.backgroundColor = color;
+    }
+    element = document.querySelector(
+      "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.JJF7Md.nAzhfb.l9bjJd",
+    );
+    if (element) {
+      element.style.backgroundColor = color;
+    }
   } else if (color == "black") {
     var alternate_color = "white";
+
+    // button appreance change
     document.querySelector("div.button").style.backgroundColor = "#5f63689e";
     document.querySelector("div.button").style.borderColor = "#121212";
     document.querySelector("div.button").style.color = "white";
     document.querySelector("div.box-button").style.border = "4px solid #000";
+
+    // permission required mic, speaker, camera: before
+    document
+      .querySelectorAll(
+        "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-SfQLQb-suEOdc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.lQq6Xc.JJF7Md.nAzhfb.MdzDJe.JJF7Md.nAzhfb",
+      )
+      .forEach((element) => {
+        element.style.backgroundColor = "";
+      });
+
+    // permission required appreance : before
+    element = document.querySelector(
+      "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-SfQLQb-suEOdc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.JJF7Md.nAzhfb.l9bjJd",
+    );
+    if (element) {
+      element.style.backgroundColor = "";
+    }
+    element = document.querySelector(
+      "button.vNWS4-LgbsSe.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd.vNWS4-LgbsSe-OWXEXe-Bz112c-M1Soyc.vNWS4-LgbsSe-OWXEXe-Bz112c-j4gsHd-J42Xof-M1Soyc.vNWS4-LgbsSe-OWXEXe-dgl2Hf.vNWS4-LgbsSe-OWXEXe-zcdHbf.XpeoU.JJF7Md.nAzhfb.l9bjJd",
+    );
+    if (element) {
+      element.style.backgroundColor = "";
+    }
   }
+
+  // background of screen overall
   var element = document.querySelector("c-wiz.SSPGKf.p2ZbV");
   if (element) {
     element.style.backgroundColor = alternate_color;
   }
-  element = document.querySelector("#browser-extension-end-buttons");
 
+  // message, tools, host control, bottom right: after
+  element = document.querySelector("#browser-extension-end-buttons");
   if (element) {
     element.style.color = color;
   }
 
+  // time, meeting id, infobox, top left : after
   element = document.querySelector(".X3H8c.P9KVBf");
   if (element) {
     element.style.color = color;
   }
+
+  // central bottom meeting control : after
   element = document.querySelector(".Sdwpn.P9KVBf");
+  if (element) {
+    element.style.color = color;
+  }
+
+  // email top left: before
+  element = document.querySelector(".ASy21.Duq0Bf");
+  if (element) {
+    element.style.color = color;
+  }
+
+  // 'Switch account' top left: before
+  element = document.querySelector("a.Kx3qp.IOxzuf");
+  if (element) {
+    element.style.color = color;
+  }
+
+  // 'Ready to join?' : before
+  element = document.querySelector("div.u6vdEc");
+  if (element) {
+    element.style.color = color;
+  }
+
+  // 'No one else is here' : before
+  element = document.querySelector("div.tJifFd");
   if (element) {
     element.style.color = color;
   }
